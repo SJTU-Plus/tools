@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "cross-env PORT=1234 react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env PUBLIC_URL=/tools react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src"
