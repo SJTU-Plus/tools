@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 function Logo({ size }: { size: string }) {
   return (
     <svg width={size} height={size} xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-plus-square-fill" viewBox="0 0 16 16">

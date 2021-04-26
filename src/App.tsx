@@ -1,6 +1,6 @@
-import { Button } from '@chakra-ui/button';
+import { Button } from '@chakra-ui/button'
 import { Box, Container, Flex, Heading, HStack, Stack, Text } from '@chakra-ui/layout'
-import { sample } from 'lodash';
+import { sample } from 'lodash'
 import React, { useState } from 'react'
 
 import Logo from './Logo'
@@ -33,7 +33,7 @@ function DiningChoice() {
     "尚品天泰",
     "毕真"
   ]
-  const [choice, setChoice] = useState<String>();
+  const [choice, setChoice] = useState<String>()
   return <Stack spacing={3}>
     <Heading size="lg">天街吃饭指南</Heading>
     <HStack spacing={5}>
