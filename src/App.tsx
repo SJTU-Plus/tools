@@ -37,23 +37,23 @@ const choicesWeight = {
     "毕真": 1,
 }
 
-function generateChoices(choicesWeight: ChoicesWeightInterface): string[] {
-  const result = [] as string[]
-  const keys = Object.keys(choicesWeight)
+function generateWeightedChoices(choicesWeight: ChoicesWeightInterface): string[] {
+  const weightedChoices = [] as string[]
+  const choices = Object.keys(choicesWeight)
 
-  keys.forEach((key) => {
+  choices.forEach((key) => {
     let weight = choicesWeight[key]
     while (weight > 0) {
-      result.push(key)
+      weightedChoices.push(key)
       weight--
     }
   })
 
-  return result
+  return weightedChoices
 }
 
 function DiningChoice() {
-  const choicesRef = useRef(generateChoices(choicesWeight))
+  const choicesRef = useRef(generateWeightedChoices(choicesWeight))
   const [choice, setChoice] = useState<String>()
   return (
     <Stack spacing={3}>
